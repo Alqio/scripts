@@ -33,3 +33,7 @@ sudo apt update
 sudo apt install fish
 
 chsh -s `which fish`
+
+
+# Install vim
+sudo apt install vim
