@@ -4,16 +4,16 @@ cd ~
 
 
 # Install Telegram
-wget https://telegram.org/dl/desktop/linux
-TELEGRAM_TAR=$(find . -type f -name "tsetup*")
+TELEGRAM_TAR=telegram.tar.xz
+wget -O $TELEGRAM_TAR "https://telegram.org/dl/desktop/linux"
 tar -xvf $TELEGRAM_TAR
 mv Telegram/ ~/app
 rm $TELEGRAM_TAR
 
 
 # Install Webstorm
-wget https://www.jetbrains.com/webstorm/download/download-thanks.html?platform=linux
-WEBSTORM_TAR=$(find . -type f -name "WebStorm*")
+WEBSTORM_TAR=webstorm.tar.gz
+wget -O $WEBSTORM_TAR "https://download.jetbrains.com/webstorm/WebStorm-2022.1.1.tar.gz"
 tar -xvf $WEBSTORM_TAR
 rm $WEBSTORM_TAR
 WEBSTORM=$(find . -type d -name "WebStorm*")
@@ -21,6 +21,7 @@ mv $WEBSTORM ~/app
 
 
 # Install chrome
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo apt install ./google-chrome-stable_current_amd64.deb
-rm google-chrome-stable_current_amd64.deb
+CHROME=google-chrome-stable_current_amd64.deb
+wget -O $CHROME "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
+sudo apt install ./$CHROME
+rm $CHROME
