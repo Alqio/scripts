@@ -16,8 +16,8 @@ PYCHARM_TAR=pycharm.tar.gz
 wget -O $PYCHARM_TAR "https://download.jetbrains.com/python/pycharm-professional-2022.2.tar.gz"
 tar -xvf $PYCHARM_TAR
 rm $PYCHARM_TAR
-WEBSTORM=$(find . -type d -name "WebStorm*")
-mv $PYCHARM_TAR ~/app
+PYCHARM=$(find . -type d -name "WebStorm*")
+mv $PYCHARM ~/app
 
 
 # Install VS code
